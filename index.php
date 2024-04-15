@@ -42,13 +42,45 @@
 
 
 
-    foreach($hotels as $hotel => $info){
-        echo "<h3>HOTEL - " . $hotel . " : </h3>";
-        echo "<div>NAME: " . $info["name"] . "</div>" ;
-        echo "<div>DESCRIPTION: " . $info["description"] . "</div>" ;
-        echo "<div>PARKING: " . $info["parking"] . "</div>" ;
-        echo "<div>VOTE: " . $info["vote"] . "</div>" ;
-        echo "<div>DISTANCE TO CENTER: " . $info["distance_to_center"] . "</div>" ;
-    }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP HOTEL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">DESCRIPTION</th>
+      <th scope="col">DESCRIPTION</th>
+      <th scope="col">PARKING</th>
+      <th scope="col">VOTE</th>
+      <th scope="col">DISTANCE TO CENTER</th>
+    </tr>
+  </thead>
+  <tbody>
+   <?php 
+   foreach($hotels as $hotel => $info){
+         echo "<tr>
+                <th scope=\"row\">1</th>
+                <td>" . $info["name"] . "</td>
+                <td>" . $info["description"] . "</td>
+                <td>" . $info["parking"] . "</td>
+                <td>" . $info["vote"] . "</td>
+                <td>" . $info["distance_to_center"] . "</td>
+             </tr>";
+    }
+   ?>
+  </tbody>
+</table>
+</div>
+</body>
+</html>
